@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./src/index.css">
+    <title>Sito per il meteo</title>
+</head>
+<body>
+
+
+
+<div class="grid-container">
+    <div class="search-input"></div>
+    <div class="search-input2"></div>
+    <div class="search-input3"></div>
+    <div id="container1" class="time-and-date-container">
+        <h1 id="time1" style="font-size: 55px;"></h1>
+        <h2 id="date1"></h2>
+        
+           
+    </div>
+    <div class="central-page"><br><br>
+        <div><img id="logo" src="./logo-without-background.png"></div>
+        <h1 id="header">What's the weather like today?</h1><br><br>
+        <div id="search-container" class="center">
+            <input type="text" id="weather-search" class="weather-search" placeholder = "Type your city here" autocomplete="off"><span><button  id="button"><img id="search-icon" src="./search-icon.png"></button></span>
+                
+        </div>
+        <p style="text-align: center; font-size: 20px;" id="message"></p>
+    </div>
+    <div class="city-name" id="mycity-container">
+        <h1 id="my-city" style="display: inline;"></h1><span><img id="locationpointer" style="display: inline;"></span>
+        <h1 style="font-size:100px;" id="degrees2"></h1>
+    </div>
+    <div id="container2" class="weather-icon-container" style="text-align: center;">
+        <h3 id="weath-con">WEATHER</h3></span>
+        <h3 id="weather-conditions"></h3>
+        <div id="icon-container"><img id="weather-icon"></div>
+    </div>
+    <div id="container3" class="degrees-container" style="text-align: center;"> 
+        <h3 id="deg-title">DEGREES</h3>
+        <h3 id="min-temp1" style="display: inline;"></h3><span><h3 style="display: inline;" id="min-temp2"></h3></span><span><br><br>
+        <h3 id="max-temp1" style="display: inline;"></h3><span><h3 style="display: inline;"id="max-temp2"></h3></span><br><br>
+        <h3 id="feels-like1" style="display: inline;"></h3><span><h3 style="display: inline;"id="feels-like2"></h3></span>
+    </div>
+        <div style="text-align: center;" id="container4" class="footer3">
+        <h3 id="windy">WIND</h3>
+        <h3 Id="wind-speed"></h3>
+    </div>
+    
+  </div>
+
+<script src="dist/bundle.js"></script></body>
+</html>

@@ -1,0 +1,384 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./font/Montserrat-Regular.eot');
+    src: url('./font/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+margin:0;
+padding:0;
+font-family: "Montserrat";
+color: white;
+background-image: url(../sfondo1.jfif);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+width:100%;
+height:100%;
+}
+
+ 
+/* CONTAINER */
+
+
+.grid-container {  
+    height:600px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.4fr 0.7fr;
+    grid-template-rows: 0.3fr 1.9fr 0.9fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "search-input search-input2 search-input3"
+      "time-and-date-container central-page city-name"
+      "weather-icon-container degrees-container footer3";
+  }
+
+/* SEARCH INPUT  LIST*/
+  
+  .search-input { 
+      grid-area: search-input;
+    }
+    
+  .search-input2 { 
+      grid-area: search-input2; 
+    }
+
+  .search-input3 { 
+      grid-area: search-input3; 
+    }
+
+
+
+/* TIME AND DATE */
+
+
+  .time-and-date-container {
+      grid-area: time-and-date-container;
+      margin-left: 25px;
+      font-size: 20px;
+      font-weight: normal;
+      margin-top: 80px;
+      padding:15px;
+      text-align: center;
+    }
+
+    #time1{
+      margin-top: 0 auto;
+    }
+    /* CENTRAL PAGE */
+
+  .central-page { 
+      grid-area: central-page;
+      margin:0 auto;
+    }
+
+    #logo {
+      margin-left:-50px;
+      margin-top:-240px;
+      width:400px;
+      height:370px;
+    }
+
+
+    #header{
+      margin-top:-40px;
+      margin-left:-30px;
+    }
+
+
+/* CITY NAME */
+
+  .city-name { 
+      grid-area: city-name;
+      
+    }
+
+    #my-city {
+      text-transform: capitalize;
+      margin-left:-20px;
+  }
+
+    /* FOOTER 3  - WIND INFORMATION*/
+
+  .footer3 {
+    background-color:rgba(1,1,1,0.5);
+    grid-area: footer3; 
+    margin-top: 5px;
+    }
+
+    #container4 {
+      display: none;
+
+    }
+
+    #windy {
+      border: 1px solid white;
+      margin-left: 150px;
+      margin-top:10px;
+      border-radius:40%;
+      width:20%;
+      margin-bottom: 5px;
+      padding: 5px;
+    }
+
+    #wind-speed {
+      margin-left: 90px;
+    }
+    
+
+
+
+    /* WEATHER CONDITIONS - ICON CONTAINER */
+
+  .weather-icon-container  {
+    
+    background-color:rgba(1,1,1,0.5);
+    grid-area: weather-icon-container;
+    margin-top: 5px;
+    }
+
+    #container2 {
+      display: none;
+    }
+
+    #weath-con {
+      border: 1px solid white;
+      border-radius:40%;
+      padding: 5px;
+      margin-top:10px;
+      margin-left:170px;
+      text-align: center;
+
+      width:30%;
+    }
+
+#weather {
+  font-size: 20px;
+}
+
+#weather-icon{
+  margin-top:-0.938rem;
+}
+
+#weather-conditions {
+
+  font-size: 20px;
+  margin-left:70px;
+}
+
+    /* DEGREES CONTAINER */
+
+  .degrees-container {    
+    background-color:rgba(1,1,1,0.5);
+    grid-area: degrees-container;
+    margin-top: 5px;
+    text-align: center;
+    padding:0;
+     }
+
+#container3 {
+  display: none;
+
+}
+
+
+#deg-title {
+      margin-left: 250px;
+      border: white 1px solid;
+      border-radius:40%;
+      width:150px;
+      margin:10px 0 5px 250px;
+      padding: 5px;
+    }
+  
+
+/* SEARCH-INPUT */
+
+    button{
+      width:90px;
+      height:47px;
+      border-bottom-right-radius: 25px;
+      border-top-right-radius: 25px;
+      border:none;
+      margin-left:0px;
+      display: inline;
+      padding:15px;
+      position: absolute;
+      margin-top: 30px;
+      
+    background-color:rgb(12, 67, 84, 0.670);
+    }
+
+button:focus {
+  outline:none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#search-icon {
+  width:25px;
+  height:25px;
+  
+  margin-top:-4px;
+}
+
+#weather-search {
+  font-size: 15px;
+  margin-top:30px;
+  margin-left:20px;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+
+        border:none;
+        color:white;
+        padding:15px;
+    background-color:rgb(5, 50, 63, 0.670);
+    }
+
+input {
+  outline:0;
+}
+
+    #container1{
+      display: none;
+    }
+
+
+    ::placeholder{
+  color: white;
+  border:none;
+}
+input:focus  {
+  outline:none;
+}
+
+
+#message {
+  margin-left: -180px;
+}
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 200px) and (max-width:700px) {
+
+  .grid-container {
+
+      grid-template-columns:1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+      "central-page"
+      "city-name"
+      "time-and-date-container"
+      "weather-icon-container"
+      "degrees-container"
+      "container4"
+      "footer3";
+  }
+
+
+#logo {
+  margin-top: -180px;
+}
+ .central-page {
+   font-size: 13px;
+   margin:0 auto;
+   text-align: center;
+ }
+
+ .center {
+   margin-left:-120px;
+   text-align: center;
+ }
+
+#ris {
+  margin-top: -50px;
+  margin-left:-20px;
+}
+
+.city-name {
+  text-align: center;
+  margin-left:0 auto;
+  margin-top:40px;
+}
+
+
+#degrees2 {
+  margin-left:0 auto;
+  text-align: center;
+}
+
+.degrees-container {
+  background-color: transparent;
+}
+
+.weather-icon-container {
+  background-color: transparent;
+}
+
+
+.footer3 {
+  margin-top:20px;
+  background-color: transparent;
+}
+.time-and-date-container {
+  text-align: center;
+  margin-left:0 auto;
+  margin-top:-20px;
+}
+
+#windy {
+  margin:0 auto;
+  text-align: center;
+}
+
+#deg-title {
+  margin-top:15px;
+  text-align: center;
+  margin-left:170px;
+  
+  margin-bottom: 25px;
+}
+#weath-con {
+  margin-left:180px;
+  text-align: center;
+  
+}
+
+#icon-container{
+  margin-left:-40px;
+  text-align: center;
+}
+
+#weather-conditions {
+  
+  padding-bottom: 25px;
+  margin:0 auto ;
+  text-align: center;
+}
+
+#wind-speed{
+  margin-left:-30px;
+  text-align: center;
+}
+
+};
+
+@media only screen and (min-width: 700px) and (max-width:1100px) {
+  .grid-container {  
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+     "central page" 
+     "time-and-date-container" 
+     "city-name"
+    "weather-icon-container" 
+    "degrees-container" 
+    "footer3";
+  }
+}

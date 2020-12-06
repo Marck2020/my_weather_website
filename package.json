@@ -1,0 +1,44 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "bin": {
+    "javascript": "npm-cli.js"
+  },
+  "directories": {
+    "doc": "doc",
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open",
+    "watch": "webpack --watch",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "dotenv": "^8.2.0",
+    "dotenv-webpack": "^6.0.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.0",
+    "html-webpack-plugin-remove": "^0.1.0",
+    "image-webpack-loader": "^7.0.1",
+    "url-loader": "^4.1.1",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
+  },
+  "dependencies": {
+    "@leanup/cli": "^1.0.51",
+    "@leanup/cli-preact": "^1.0.51",
+    "css-loader": "^5.0.1",
+    "fs": "0.0.1-security",
+    "mini-css-extract-plugin": "^1.3.2",
+    "style-loader": "^2.0.0"
+  },
+  "node": {
+    "fs": "empty"
+  }
+}
